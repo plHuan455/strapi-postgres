@@ -23,4 +23,13 @@ module.exports = [
       },
     },
   },
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['localhost', 'https://strapi-cms-6x62.onrender.com'],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      keepHeaderOnError: true,
+    },
+  },
 ];
