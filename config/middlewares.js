@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = ({ env }) => [
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
@@ -26,7 +26,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['localhost', 'https://strapi-cms-6x62.onrender.com'],
+      origin: [`http://localhost:${env('PORT')}`, env('PRODUCT_URL')],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
