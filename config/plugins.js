@@ -1,13 +1,18 @@
 module.exports = ({ env }) => ({
   // ...
   upload: {
-    provider: "firebase-storage",
-    providerOptions: {
-      serviceAccount: require("./SERVICE_ACCOUNT_KEY_PATH.json"),
-      bucketUrl: env("STORAGE_BUCKET_URL"),
-      uploadOptions: {},
-      deleteOptions: {},
-      debug: true,
+    config: {
+      provider: 'cloudinary',
+      providerOptions: {
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
+      },
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
+      },
     },
   },
   // ...
