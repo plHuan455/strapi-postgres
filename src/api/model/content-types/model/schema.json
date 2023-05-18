@@ -15,9 +15,6 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "string"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -29,11 +26,14 @@
         "audios"
       ]
     },
-    "cost": {
-      "type": "string"
-    },
     "discount": {
       "type": "string"
+    },
+    "cost": {
+      "type": "biginteger"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
